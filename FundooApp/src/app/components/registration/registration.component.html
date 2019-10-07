@@ -1,0 +1,51 @@
+<div class="registration">
+<h2>Register</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<div>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>UserName</mat-label>
+    <input matInput placeholder="UserName" formControlName="username">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+</p>
+</div>
+<div>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" formControlName="email">
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+</p>
+</div>
+<div>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Phone Number</mat-label>
+    <input matInput placeholder="Phone Number" formControlName="phoneno">
+    <mat-icon matSuffix>phone</mat-icon>  
+  </mat-form-field>
+</p>
+</div>
+<div>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput placeholder="Address" formControlName="address">
+    <mat-icon matSuffix>home</mat-icon>
+  </mat-form-field>
+</p>
+</div>
+<div>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Password" type="password" formControlName="password">
+    <mat-icon matSuffix>lock</mat-icon>
+  </mat-form-field>
+</p>
+</div>
+<div> <button  mat-raised-button>Register</button></div>
+</form>
+</div>
