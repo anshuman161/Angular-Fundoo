@@ -11,15 +11,15 @@ import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 export class ResetpasswordComponent implements OnInit {
   resetForm: FormGroup;
   loading = false;
-  // tslint:disable-next-line:ban-types
-  private token: String;
+  private token: string;
   constructor(private service: UserRegistationService,
               private router: Router,
               private route: ActivatedRoute) { }
               ngOnInit() {
+               // this.token = this.route.snapshot.paramMap.get('token');
                 this.resetForm = new FormGroup({
                   password: new FormControl('', [Validators.required]),
-                  // confirmpassword: new FormControl('', [Validators.required])
+                  confirmPassword: new FormControl('', [Validators.required])
                 });
                 this.route.params.subscribe(param => {
                   this.token = param.token; });

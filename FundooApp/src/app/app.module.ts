@@ -38,6 +38,8 @@ import { ActivatedRoute, Router } from '@angular/router';
     ReactiveFormsModule,
     MatButtonModule,
     HttpClientModule,
+    ActivatedRoute,
+    Router,
     FormsModule,
   ],
   providers: [UserRegistationService],
