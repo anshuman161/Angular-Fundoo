@@ -11,6 +11,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   loading = false;
+  errorMessage: string;
   constructor(private service: UserRegistationService,
               private router: Router) { }
 
@@ -24,18 +25,15 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.loginForm.value);
-    if (this.loginForm.invalid) {
-
-      return ;
-    }
     this.service.doLogIn(this.loginForm.value)
     .subscribe(
       (response: any) => {
-        console.log(response.message);
-        this.router.navigate(['/dashboard']);
+          this.router.navigate(['/dashboard']);
+          console.log(response.message);
       },
       error => {
-        this.loading = false;
+        this.errorMessage = 'email or password is wrong!!';
+        console.log(error);
       }
     );
   }

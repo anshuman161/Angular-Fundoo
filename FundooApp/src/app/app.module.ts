@@ -15,7 +15,7 @@ import { UserRegistationService } from './components/services/user-registration.
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassword.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
-import { ActivatedRoute, Router } from '@angular/router';
+
 
 
 @NgModule({
@@ -38,8 +38,6 @@ import { ActivatedRoute, Router } from '@angular/router';
     ReactiveFormsModule,
     MatButtonModule,
     HttpClientModule,
-    ActivatedRoute,
-    Router,
     FormsModule,
   ],
   providers: [UserRegistationService],

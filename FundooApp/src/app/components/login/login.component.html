@@ -1,5 +1,6 @@
 <!-- main app container -->
 <div class="login">
+  <h2>  {{errorMessage}} </h2>
     <h2>LogIn</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div>
@@ -25,4 +26,4 @@
 </form> 
     </div>
     <nav><div style="text-align: center"><a routerLink="/forgetpassword">Forget Password ?</a></div></nav>
-
+    <nav><div style="text-align: center"><a routerLink="/registration">Registration </a></div></nav>

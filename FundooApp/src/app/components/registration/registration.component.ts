@@ -10,7 +10,6 @@ import { UserRegistationService } from '../services/user-registration.service';
 })
 export class RegistrationComponent implements OnInit {
   registerForm: FormGroup;
-  loading = false;
   constructor(private service: UserRegistationService,
               private router: Router) { }
 
@@ -28,17 +27,14 @@ export class RegistrationComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.registerForm.value);
-    if (this.registerForm.invalid) {
-      return;
-    }
     this.service.doRegistration(this.registerForm.value)
     .subscribe(
       (response: any) => {
-        console.log(response.message);
-        this.router.navigate(['/login']);
+          this.router.navigate(['/login']);
+          console.log(response.message);
       },
       error => {
-        this.loading = false;
+        console.log(error);
       }
     );
   }
