@@ -1,1 +1,115 @@
-<p>dashboard works!</p>
+    <div class="example-sidenav-content">
+      <div>
+        <button  mat-icon-button (click)="drawer.toggle()">
+            <mat-icon matSuffix>menu</mat-icon>
+        </button>
+      </div>
+      <div>
+          <img class="imagediv" alt="" aria-hidden="true"
+          src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" srcset="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" style="width:40px;height:40px">
+      </div>
+      <div>
+          <span class="keep">Keep</span>
+        </div>
+        <div class="matoutside">
+          <mat-card class="matCard">
+           
+            <div>
+            <mat-icon>search</mat-icon>
+          </div>
+          <div>
+            <input class="matInput" matInput placeholder="Serach...." >
+          </div>
+          <div>
+            <mat-icon>clear</mat-icon>
+          </div>
+        
+          </mat-card>
+        </div>
+          <div>
+              <mat-icon class="round">autorenew</mat-icon>
+            </div>
+            <div>
+                <mat-icon class="dashicon">dashboard</mat-icon>
+              </div>
+              <div>
+                  <mat-icon class="setting">settings_applications</mat-icon>
+                </div>
+                <div>
+                    <mat-icon class="googleapp">view_comfy</mat-icon>
+                  </div>
+                
+                  <div >
+                     <img class="image" src="/assets/images/downloadforprofile.jpeg">
+                   </div>
+      </div>
+      
+     
+<div>
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+  <div>
+    <div class="notes">  
+        
+        <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
+            <mat-icon class="notesicon">
+                lightbulb_outline
+            </mat-icon>
+            Notes
+          </button>
+   </div> 
+   <div >  
+   
+      <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
+          <mat-icon class="remindericon">
+              notifications_none
+          </mat-icon>
+          Reminders
+        </button>
+   </div> 
+   </div>
+   <div class="label">
+    <div class="labelsname"> 
+    Labels
+    </div>
+     <div *ngIf="labels ? labels.length>0: false">
+        <div *ngFor="let label of labels">
+          <button mat-raised-button class="menuButton" routerLink="labels/{{label.labelName}}"
+               routerLinkActive="active">
+                <mat-icon >
+                label
+                </mat-icon>
+                {{label.labelName}}
+          </button>
+        </div>
+      </div>
+      <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
+          <mat-icon class="createlabelicon">
+            create
+          </mat-icon>
+          Edit Labels
+        </button>
+   </div> 
+    
+   <div class="archive">
+      <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
+          <mat-icon class="archiveicon">
+              archive
+          </mat-icon>
+          Archive
+        </button>
+   </div>
+  
+   <div class="bin">
+      <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
+          <mat-icon class="binicon">
+              delete
+          </mat-icon>
+          Bin
+        </button>
+   </div> 
+    </mat-drawer>
+  </mat-drawer-container>
+</div>
+
+

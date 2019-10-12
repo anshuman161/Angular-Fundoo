@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserRegistationService } from '../services/user-registration.service';
+import { UserRegistationService } from 'src/app/services/user-registration.service';
+
 
 @Component({
   selector: 'app-registration',
@@ -35,6 +36,7 @@ export class RegistrationComponent implements OnInit {
       },
       error => {
         console.log(error);
+        this.router.navigate(['/registration']);
       }
     );
   }

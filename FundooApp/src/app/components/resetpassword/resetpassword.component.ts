@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserRegistationService } from '../services/user-registration.service';
+import { UserRegistationService } from 'src/app/services/user-registration.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 
@@ -10,7 +10,7 @@ import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 })
 export class ResetpasswordComponent implements OnInit {
   resetForm: FormGroup;
-  loading = false;
+
   private token: string;
   constructor(private service: UserRegistationService,
               private router: Router,
@@ -37,7 +37,7 @@ export class ResetpasswordComponent implements OnInit {
                       this.router.navigate(['/login']);
                     },
                     error => {
-                      this.loading = false;
+                      console.log(error);
                     }
                   );
               }

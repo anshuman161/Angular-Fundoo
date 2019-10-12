@@ -1,0 +1,103 @@
+.example-sidenav-content {
+  display: flex;
+  height: 60px;
+  align-items: center;
+ // background-color: rgb(45, 218, 68);
+}
+.example-container {
+  // width: 100%;
+  height: 1080px;
+  // border: 1px  solid rgba(87, 211, 108, 0.5);
+  //background-color: rgb(246, 247, 234);
+}
+.example-sidenav {
+  padding: 50px;
+}
+.keep{
+  font-size: 22px;
+  color: rgb(104, 107, 79);
+}
+.matoutside{
+  margin: 15%;
+  
+}
+.matCard{
+  display: flex;
+  //padding: 12vw;
+  width: 500px;
+  border-radius: 10px;
+  //margin-top: 5px;
+ // background-color: rgb(130, 132, 214);
+}
+.matInput{
+  width: 420px;
+  border-radius: none;
+  height: 35px;
+  outline: none;
+ 
+}
+.round{
+  margin: 0px;
+  top: 0;
+}
+.dashicon{
+  margin: 20px;
+}
+.setting{
+margin: 5px;
+}
+.googleapp{
+margin: 50px;
+}
+.image{
+ margin: -27px;
+  border-radius: 50%;
+  width:30px;
+  height:30px;
+}
+.notes{
+  border-radius: 30%;
+  width: 200px;
+  height: 55px;
+}
+
+.binicon{
+  margin-right:105px;
+  margin-left:20px;
+  
+}
+.notesicon{
+  margin-right:80px;
+  margin-left:20px;
+}
+
+.remindericon{
+  margin-right:50px;
+  margin-left:20px;
+  // width: 200px;
+  // height: 55px;
+  // border-radius: 10px;
+}
+.menuButton:focus{
+  background-color: rgb(252, 190, 74);
+}
+
+.bin{
+ 
+  border-radius: 30px;
+}
+.createlabelicon{
+  margin-right:55px;
+  margin-left:20px;
+  border-radius: 30%;
+}
+
+.archiveicon{
+  
+  margin-right:75px;
+  margin-left:20px;
+}
+.archive{
+  border-radius: 30%;
+  margin-bottom: 20px;
+}

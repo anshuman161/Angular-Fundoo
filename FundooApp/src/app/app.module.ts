@@ -11,12 +11,17 @@ import { MatInputModule, MatButtonModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { UserRegistationService } from './components/services/user-registration.service';
+
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassword.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
-
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import { NotesComponent } from './components/notes/notes.component';
+import { LabelsComponent } from './components/labels/labels.component';
+import { UserRegistationService } from 'src/app/services/user-registration.service';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,9 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     LoginComponent,
     DashboardComponent,
     ForgetpasswordComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    NotesComponent,
+    LabelsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +46,10 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     MatButtonModule,
     HttpClientModule,
     FormsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [UserRegistationService],
   bootstrap: [AppComponent]

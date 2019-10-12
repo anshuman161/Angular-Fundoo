@@ -12,8 +12,8 @@ export class UserRegistationService {
     return this.http.post('http://localhost:8080/user/goRegister', user, { responseType: 'text' as 'json' });
   }
 
-  public doLogIn(user: any) {
-    return this.http.post('http://localhost:8080/user/goLogin', user, { responseType: 'text' as 'json' });
+  public doLogIn(data: any) {
+    return this.http.post('http://localhost:8080/user/goLogin', data);
   }
 
   public doforgetPassword(email: any) {

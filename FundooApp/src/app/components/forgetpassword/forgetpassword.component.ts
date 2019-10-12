@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { UserRegistationService } from '../services/user-registration.service';
+import { UserRegistationService } from 'src/app/services/user-registration.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 })
 export class ForgetpasswordComponent implements OnInit {
   forgetForm: FormGroup ;
-  loading = false;
   constructor(private service: UserRegistationService,
               private router: Router) { }
 
@@ -38,7 +37,6 @@ export class ForgetpasswordComponent implements OnInit {
       },
       error => {
         console.log('failed');
-        this.loading = false;
       }
     );
   }
