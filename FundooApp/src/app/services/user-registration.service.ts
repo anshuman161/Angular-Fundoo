@@ -17,7 +17,6 @@ export class UserRegistationService {
   }
 
   public doforgetPassword(email: any) {
-    console.log(email.email);
     return this.http.post('http://localhost:8080/user/forgetPassword?email=' + email.email, null);
   }
   public doResePassword(resetpassword: any, token: any) {

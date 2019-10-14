@@ -9,6 +9,14 @@
   height: 1080px;
   // border: 1px  solid rgba(87, 211, 108, 0.5);
   //background-color: rgb(246, 247, 234);
+  // padding-left: 32px;
+  //   display: inline-block;
+  //   line-height: 40px;
+  //   vertical-align: top;
+  //   width: 176px;
+  //   white-space: nowrap;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
 }
 .example-sidenav {
   padding: 50px;
@@ -55,10 +63,14 @@ margin: 50px;
   width:30px;
   height:30px;
 }
-.notes{
+.noteRemind{
   border-radius: 30%;
   width: 200px;
   height: 55px;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 8px 0;
 }
 
 .binicon{
@@ -91,13 +103,28 @@ margin: 50px;
   margin-left:20px;
   border-radius: 30%;
 }
+.labelsname{
+  color: #5f6368;
+  padding: 15px 24px 10px;
+}
 
+.labelicon{
+  margin-right:75px;
+  margin-left:20px;
+}
 .archiveicon{
-  
+
   margin-right:75px;
   margin-left:20px;
 }
 .archive{
   border-radius: 30%;
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 8px 0;
+}
+.noteApp{
+  margin-top: 15px;
 }

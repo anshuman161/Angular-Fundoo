@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassword.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { NotesComponent } from './components/notes/notes.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'registration', component: RegistrationComponent},
   {path: 'forgetpassword', component: ForgetpasswordComponent},
   {path: 'changePassword/:token', component: ResetpasswordComponent},
-  {path: 'dashboard', component: DashboardComponent}
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'notes', component: NotesComponent}
 ];
 
 @NgModule({

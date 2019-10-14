@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes.component.scss']
 })
 export class NotesComponent implements OnInit {
-
+popup = false;
   constructor() { }
 
   ngOnInit() {
   }
-
+onClick() {
+  this.popup = !this.popup;
+}
+closebutton() {
+  this.popup = !this.popup;
+}
 }

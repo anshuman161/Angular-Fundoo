@@ -42,74 +42,82 @@
                   <div >
                      <img class="image" src="/assets/images/downloadforprofile.jpeg">
                    </div>
-      </div>
+               </div>
       
      
 <div>
 <mat-drawer-container class="example-container">
     <mat-drawer #drawer class="example-sidenav" mode="side">
   <div>
-    <div class="notes">  
-        
-        <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
+      
+   <ul class="noteRemind">
+        <button mat-raised-button class="menuButton" (click)="getnotesDialog()">
             <mat-icon class="notesicon">
                 lightbulb_outline
             </mat-icon>
             Notes
           </button>
-   </div> 
-   <div >  
-   
-      <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
-          <mat-icon class="remindericon">
-              notifications_none
-          </mat-icon>
-          Reminders
-        </button>
-   </div> 
+          <button mat-raised-button class="menuButton" (click)="getreminderDialog()">
+            <mat-icon class="remindericon">
+                notifications_none
+            </mat-icon>
+            Reminders
+          </button>
+   </ul> 
    </div>
-   <div class="label">
+   <div>
+     <ul class="label">
     <div class="labelsname"> 
     Labels
     </div>
-     <div *ngIf="labels ? labels.length>0: false">
+     <div>
         <div *ngFor="let label of labels">
-          <button mat-raised-button class="menuButton" routerLink="labels/{{label.labelName}}"
-               routerLinkActive="active">
-                <mat-icon >
-                label
+          <button mat-raised-button class="menuButton">
+                
+                <mat-icon class="labelicon">
+                edit
                 </mat-icon>
                 {{label.labelName}}
+              
           </button>
         </div>
       </div>
-      <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
+      <button mat-raised-button class="menuButton" (click)="getLabels()">
           <mat-icon class="createlabelicon">
             create
           </mat-icon>
           Edit Labels
         </button>
+      </ul>
    </div> 
     
-   <div class="archive">
+   <div>
+     <ul class="archive">
+      <div> 
       <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
           <mat-icon class="archiveicon">
               archive
           </mat-icon>
           Archive
         </button>
-   </div>
-  
-   <div class="bin">
+      </div>
+    <div>
+ 
       <button mat-raised-button class="menuButton" (click)="openLabelDialog()">
           <mat-icon class="binicon">
               delete
           </mat-icon>
           Bin
         </button>
+      </div>
+      </ul>
    </div> 
     </mat-drawer>
+    <div class="noteApp">
+        <app-notes></app-notes>
+    </div>
   </mat-drawer-container>
+  
 </div>
 
 
