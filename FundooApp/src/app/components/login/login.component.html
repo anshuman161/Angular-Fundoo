@@ -1,29 +1,40 @@
 <!-- main app container -->
 <div class="login">
-  <h2>  {{errorMessage}} </h2>
+ 
+  <h3></h3>
     <h2>LogIn</h2>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="loginForm" >
     <div>
     <p>
       <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" formControlName="email">
+        <input type="email" matInput placeholder="Email" formControlName="email">
         <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="loginForm.get('email').hasError('required')">
+     You must enter a valid email</mat-error>
+    <mat-error *ngIf="loginForm.get('email').hasError('email')">
+      You must enter a valid email</mat-error> 
+      
       </mat-form-field>
     </p>
     </div>
-    
     <div>
     <p>
       <mat-form-field appearance="fill">
         <mat-label>Password</mat-label>
         <input matInput placeholder="Password" type="password" formControlName="password">
         <mat-icon matSuffix>lock</mat-icon>
+         <mat-error *ngIf="loginForm.get('password').hasError('required')">
+          You must enter a value</mat-error>
+         <mat-error *ngIf="loginForm.get('password').hasError('pattern')">
+           You must enter a value</mat-error> 
+          
+ 
       </mat-form-field>
     </p>
     </div>
-    <div><button  mat-raised-button>LogIn</button></div>
+    <div><button  mat-raised-button (click)='onSubmit()'>LogIn</button></div>
 </form> 
-    </div>
-    <nav><div style="text-align: center"><a routerLink="/forgetpassword">Forget Password ?</a></div></nav>
-    <nav><div style="text-align: center"><a routerLink="/registration">Registration </a></div></nav>
+<nav><div style="text-align: center"><a routerLink="/forgetpassword">Forget Password ?</a></div></nav>
+<nav><div style="text-align: center"><a routerLink="/registration">Registration </a></div></nav>
+</div>

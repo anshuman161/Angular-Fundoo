@@ -1,37 +1,31 @@
-<div class="globlediv">
-<div *ngIf="popup" class="popupnotematCard">
-    <mat-card >
-    <div>
-      <input class="notematInput" matInput placeholder="Title" >
+ 
+  <div class="globlediv">
+    <div *ngIf="popup" class="popupnotematCard">
+      <mat-card>
+              <form [formGroup]="createnotesform" >
+            <div>
+      <input class="notematInput" matInput placeholder="Title" formControlName="tittle">
     </div>
     <div>
-        <textarea class="notedescription"></textarea>
+        <textarea class="notedescription" placeholder="Take a note..." formControlName="description"></textarea>
       </div>
       <div class="bottomofmatcard" role="toolbar">
-            <button mat-flat-button class="closebutton" (click)="closebutton()">Close</button>  
+            <button mat-flat-button class="closebutton" (click)="onSubmit()">Close</button>  
         </div>
-    </mat-card>
+        </form>
+      </mat-card>
 </div>
+
 <div *ngIf="!popup" (click)="onClick()">   
-        <div class="mainbar">
-                <mat-form-field class="notemainmatInput">
-                        <input matInput placeholder="Title">
-                        <mat-icon class="checkicons">check-square</mat-icon>
-                        <mat-icon class="brushicons">brush</mat-icon>
-                        <mat-icon class="imageicons">image</mat-icon>
-                    
-                      </mat-form-field>
-            </div>      
-        </div>        
+  <div class="mainbar">
+    <mat-form-field class="notemainmatInput">
+      <input matInput placeholder="Take a note...">
+      <mat-icon class="checkicons">check</mat-icon>
+      <mat-icon class="brushicons">brush</mat-icon>
+      <mat-icon class="imageicons">image</mat-icon>
+    </mat-form-field>
+  </div>      
+</div>        
 </div>
-<!-- <div class="homenotematCard">
-        <mat-card >
-        <div>
-          <input class="homenotematInput" matInput placeholder="Title" >
-        </div>
-        <div>
-            <textarea class="homenotedescription"></textarea>
-          </div>
-        </mat-card>
-</div> -->
-      
+
+

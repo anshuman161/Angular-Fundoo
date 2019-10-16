@@ -22,7 +22,9 @@ import { NotesComponent } from './components/notes/notes.component';
 import { LabelsComponent } from './components/labels/labels.component';
 import { UserRegistationService } from 'src/app/services/user-registration.service';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {TextFieldModule} from '@angular/cdk/text-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     ForgetpasswordComponent,
     ResetpasswordComponent,
     NotesComponent,
-    LabelsComponent
+    LabelsComponent,
+    DisplaynotesComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSidenavModule,
     MatToolbarModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule,
+    TextFieldModule
   ],
   providers: [UserRegistationService],
   bootstrap: [AppComponent]

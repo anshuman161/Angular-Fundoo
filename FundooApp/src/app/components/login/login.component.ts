@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserRegistationService } from 'src/app/services/user-registration.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -14,28 +15,31 @@ export class LoginComponent implements OnInit {
 
   errorMessage: string;
   constructor(private service: UserRegistationService,
-              private router: Router) { }
+              private router: Router,
+              private snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup(
       {
-        email: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required, Validators.email]),
         password: new FormControl('', [Validators.required]),
       }
     );
   }
   onSubmit() {
-    console.log(this.loginForm.value);
+    if (this.loginForm.invalid) {
+      return ;
+    }
     this.service.doLogIn(this.loginForm.value)
     .subscribe(
       (data: any) => {
         localStorage.setItem('token', data.messege);
         this.router.navigate(['/dashboard']);
+        this.snackBar.open('login successful');
       },
       error => {
-        this.errorMessage = 'email or password is wrong!!';
-        console.log(error);
-      }
+        this.snackBar.open('Email or Password is wrong.');
+             }
     );
   }
 }
