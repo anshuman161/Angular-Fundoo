@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesService } from 'src/app/services/notes.service';
+import { MatDialog } from '@angular/material';
+import { EditnotesComponent } from '../editnotes/editnotes.component';
 
 @Component({
   selector: 'app-displaynotes',
@@ -9,7 +11,8 @@ import { NotesService } from 'src/app/services/notes.service';
 export class DisplaynotesComponent implements OnInit {
   listNotes: any;
   noteData: any;
-  constructor(private noteService: NotesService ) { }
+  constructor(private noteService: NotesService,
+              private dialog: MatDialog ) { }
 
   ngOnInit() {
     this.getAllNotes();
@@ -21,6 +24,9 @@ export class DisplaynotesComponent implements OnInit {
       console.log(response.object);
     });
 }
-
-
+onclickGet(note: any) {
+  const dialogRef = this.dialog.open(EditnotesComponent, {
+    data:  note
+  });
+}
 }

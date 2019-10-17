@@ -1,11 +1,13 @@
 .notedisplay{
-width: 200px;
+width: 300px;
 height: auto;
-display: flex;
+//display: flex;
 margin: 5px;
 }
 .outerdisplay{
     display: flex;
     flex-wrap: wrap;
 }
-
+.personadd{
+    margin-left: 5px;
+}

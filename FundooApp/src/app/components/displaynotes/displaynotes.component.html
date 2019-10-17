@@ -1,19 +1,20 @@
-
 <div class="outerdisplay">
- <div class="notedisplay" *ngFor='let note of listNotes'>  
-    <mat-card class="ntcard">
-        <mat-card-header>
-        <mat-card-title>
-         <!-- <span-card-title class="title_card">    -->
-            {{note.tittle}}
-        <!-- </span-card-title> -->
-        </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-        <textarea matiInput class="text_area" > 
-            {{note.description}}
-        </textarea>
-        </mat-card-content>
-    </mat-card>
-</div> 
+   <div class="notedisplay" *ngFor='let note of listNotes'>
+      <mat-card>
+         <div (click)="onclickGet(note)">
+            <mat-card-header>
+               <mat-card-title>
+                  <input matInput placeholder="Title" value={{note.tittle}}>
+               </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+               <input style="margin-left: 15px" matInput placeholder="Take a note..." value={{note.description}}>
+            </mat-card-content>
+         </div>
+         <div>
+            <app-toolbar [note]="note"></app-toolbar>
+         </div>
+
+      </mat-card>
+   </div>
 </div>

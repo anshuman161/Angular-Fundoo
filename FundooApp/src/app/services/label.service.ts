@@ -18,4 +18,8 @@ export class LabelService {
      // tslint:disable-next-line:max-line-length
      return this.http.put('http://localhost:8080/labels/addNotesLables?', null, { headers: new HttpHeaders().set('token', localStorage.getItem('token')).set('noteId', noteId).set('labelId', labelId) });
     }
+    editLabel(labelId: any) {
+      // tslint:disable-next-line:max-line-length
+      return this.http.put('http://localhost:8080/labels/editLabels?', null, { headers: new HttpHeaders().set('token', localStorage.getItem('token')).set('labelId', labelId) });
+    }
 }

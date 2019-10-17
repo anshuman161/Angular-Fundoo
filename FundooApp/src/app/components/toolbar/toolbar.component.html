@@ -1,0 +1,27 @@
+<div class="topdiv">
+   <div class="icons1">
+      <button mat-icon-button><img id="mainicons" mat-card-image src="/assets/images/bell.png"></button>
+   </div>
+   <div class="icons2">
+      <button mat-icon-button><img id="mainicons" mat-card-image src="/assets/images/personadd.png"></button>
+   </div>
+   <div class="icons3">
+      <button mat-icon-button><img id="mainicons" mat-card-image src="/assets/images/paint.png"></button>
+   </div>
+   <div class="icons4">
+      <button mat-icon-button><img id="mainicons" mat-card-image src="/assets/images/archive.png"></button>
+   </div>
+   <div class="icons5">
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"><img
+            id="mainicons" mat-card-image src="/assets/images/more3dot.png"></button>
+      <mat-menu #menu="matMenu"> 
+         <button mat-menu-item (click)="onclickdelete()">
+           Delete Note
+         </button>
+         <button mat-menu-item>
+            <div>Add Label</div>
+         </button>
+      </mat-menu>
+   </div>
+
+</div>

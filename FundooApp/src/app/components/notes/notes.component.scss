@@ -49,12 +49,16 @@ transition-timing-function: ease-in;
 .imageicons{
     margin-left: 20px; 
 }
-//  .globlediv{
-//     margin-top: 30px;
-//     margin-left: 25%; 
-//     margin-bottom: 50px;
-//  }
-// .matcardbox{
-//     margin: 10px;
-//   width: 38vw;
-// }
+
+#mainicons {
+    margin-top: 0px;
+    opacity: 0.8;
+    width: 40%;
+    height: 40%;
+}
+.icons{
+        display: flex;
+        flex-direction: row;
+        margin-left: 380px;
+        //margin-bottom: -25px;;
+}

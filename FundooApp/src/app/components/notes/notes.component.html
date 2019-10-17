@@ -1,7 +1,6 @@
- 
-  <div class="globlediv">
+ <div class="globlediv">
     <div *ngIf="popup" class="popupnotematCard">
-      <mat-card>
+      <mat-card class="mtcardbox">
               <form [formGroup]="createnotesform" >
             <div>
       <input class="notematInput" matInput placeholder="Title" formControlName="tittle">
@@ -13,6 +12,7 @@
             <button mat-flat-button class="closebutton" (click)="onSubmit()">Close</button>  
         </div>
         </form>
+        <app-toolbar></app-toolbar>
       </mat-card>
 </div>
 
@@ -20,12 +20,20 @@
   <div class="mainbar">
     <mat-form-field class="notemainmatInput">
       <input matInput placeholder="Take a note...">
-      <mat-icon class="checkicons">check</mat-icon>
-      <mat-icon class="brushicons">brush</mat-icon>
-      <mat-icon class="imageicons">image</mat-icon>
+      <div class="icons">
+        <div class="icons1">
+        <button mat-icon-button><img id="mainicons" mat-card-image src="/assets/images/check.png"></button> 
+     </div>
+     <div class="icons2">
+         <button mat-icon-button><img id="mainicons" mat-card-image src="/assets/images/brush.png"></button> 
+      </div>
+      <div class="icons3">
+         <button mat-icon-button><img id="mainicons" mat-card-image src="/assets/images/image.png"></button> 
+      </div>
+    </div>
     </mat-form-field>
   </div>      
 </div>        
 </div>
 
-
+ 

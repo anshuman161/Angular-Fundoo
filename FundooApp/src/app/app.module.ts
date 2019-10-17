@@ -25,6 +25,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {TextFieldModule} from '@angular/cdk/text-field';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { EditnotesComponent } from './components/editnotes/editnotes.component';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,9 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     ResetpasswordComponent,
     NotesComponent,
     LabelsComponent,
-    DisplaynotesComponent
+    DisplaynotesComponent,
+    ToolbarComponent,
+    EditnotesComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +59,10 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     MatCardModule,
     MatDialogModule,
     MatSnackBarModule,
-    TextFieldModule
+    TextFieldModule,
+    MatMenuModule
   ],
+  entryComponents: [EditnotesComponent],
   providers: [UserRegistationService],
   bootstrap: [AppComponent]
 })

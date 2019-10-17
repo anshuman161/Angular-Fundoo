@@ -13,8 +13,16 @@ doFetchNotes(notes: any) {
 createNotes(notes: any) {
   return this.http.post('http://localhost:8080/notes/creation', notes ,
   { headers: new HttpHeaders().set('token', localStorage.getItem('token')) });
-console.log(notes);
+}
+editNotes(notes: any) {
+  return this.http.post('http://localhost:8080/notes/updation', notes ,
+  { headers: new HttpHeaders().set('token', localStorage.getItem('token')) });
+}
 
+deleteNotes(noteId: any) {
+  console.log(noteId.noteId);
+  return this.http.delete('http://localhost:8080/notes/deletion?noteId=' + noteId,
+  { headers: new HttpHeaders().set('token', localStorage.getItem('token')) });
 }
 
 }

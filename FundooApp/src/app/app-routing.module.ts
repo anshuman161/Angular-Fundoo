@@ -7,6 +7,8 @@ import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassw
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { EditnotesComponent } from './components/editnotes/editnotes.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent
 },
   {path: 'notes', component: NotesComponent},
-  {path: 'displaynote', component: DisplaynotesComponent}
+  {path: 'displaynote', component: DisplaynotesComponent},
+  {path: 'toolbar', component: ToolbarComponent},
+  {path: 'editnotes', component: EditnotesComponent}
 ];
 
 @NgModule({

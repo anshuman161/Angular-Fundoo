@@ -23,12 +23,15 @@ onClick() {
   this.popup = !this.popup;
 }
 onSubmit() {
+  // tslint:disable-next-line:no-bitwise
+  if (this.createnotesform.value.tittle !== '' || this.createnotesform.value.description !== '') {
   console.log(this.createnotesform.value);
   this.noteService.createNotes(this.createnotesform.value)
    .subscribe((response: any) => {
    this.noteData = response.object ;
    console.log(response.object);
        });
+      }
   this.popup = !this.popup;
 }
 
